@@ -1,0 +1,59 @@
+.plus-background {
+  background-image: url("../../assets/bg_overview.jpg");
+  background-size: cover;
+}
+
+.plus-title {
+  margin-top: 5rem;
+  h1 {
+    text-shadow: 0 0 10px #f0cf95;
+  }
+  p {
+    font-size: 1.5rem;
+    margin: 2rem 5rem;
+  }
+}
+
+.plus-features {
+  text-shadow: 0 0 20px #b5793d;
+}
+
+.subscription-container {
+  a {
+    transition: all 0.2s;
+    &:hover {
+      border-color: #b5793d;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .plus-overlay {
+    padding: 5rem 2rem;
+  }
+
+  .plus-title {
+    p {
+      font-size: 1rem;
+      margin: 2rem 0;
+    }
+  }
+
+  .plus-features {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p{
+        display: block;
+    }
+    span{
+        display: none;
+    }
+  }
+
+  .subscription-container{
+    flex-direction: column;
+    align-items: center;
+  }
+}

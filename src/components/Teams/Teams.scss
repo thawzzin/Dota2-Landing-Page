@@ -1,0 +1,42 @@
+.team-background {
+    // background-image: url('../../assets/dota2_bg2.jpg');
+    background-image: linear-gradient(
+        to right,
+        #111,
+        #333,
+        #111
+    );
+  background-size: cover;
+  
+}
+
+.team-title{
+    margin-top: 5rem;
+    h1{
+        text-shadow: 0 0 10px #fff;
+    }
+    p{
+        
+        font-size: 1.5rem;
+        margin: 2rem 5rem;
+    }
+}
+
+.image-container {
+    h4{
+        font-family: "Noto Sans", sans-serif;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    
+    .team-background{
+        padding: 5rem 2rem;
+    }
+    .team-title{
+        p{
+            font-size: 1rem;
+            margin: 2rem 0;
+        }
+    }
+  }

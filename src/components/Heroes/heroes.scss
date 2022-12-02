@@ -1,0 +1,49 @@
+.hero-background {
+  background-image: url('../../assets/dota2_bg2.jpg');
+  background-size: cover;
+}
+
+.hero-title{
+    margin-top: 5rem;
+    h1{
+        text-shadow: 0 0 10px #fff;
+    }
+    p{
+        font-size: 1.5rem;
+        margin: 2rem 5rem;
+    }
+}
+
+.strength {
+  h1 {
+    text-shadow: 0 0 20px #ff6046;
+  }
+}
+
+.agility {
+  h1 {
+    text-shadow: 0 0 20px greenyellow;
+  }
+}
+
+.intelligence {
+  h1 {
+    text-shadow: 0 0 20px cyan;
+  }
+}
+
+@media screen and (max-width: 767px) {
+    .image-container{
+        width: 5rem;
+        margin-bottom: .5rem;
+    }
+    .hero-background{
+        padding: 5rem 2rem;
+    }
+    .hero-title{
+        p{
+            font-size: 1rem;
+            margin: 2rem 0;
+        }
+    }
+  }

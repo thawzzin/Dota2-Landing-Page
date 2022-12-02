@@ -1,0 +1,75 @@
+.nav-link {
+  font-family: "Noto Serif", sans-serif;
+  font-size: 1.2rem;
+}
+
+.logo-container {
+  width: 20rem;
+  
+}
+
+@media screen and (max-width: 767px) {
+  .logo-container {
+    width: 60%;
+  }
+  .nav-link-container {
+    background-color: #111;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    max-height: 0;
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+
+    &.active {
+      max-height: 100vh;
+
+      & .nav-link {
+        .link {
+          opacity: 1;
+        }
+      }
+    }
+
+    .nav-link {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 1.5rem;
+      padding: 7rem 0 2rem 2rem;
+      .link {
+        width: fit-content;
+        opacity: 0;
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  .navbar {
+    padding: 2rem;
+  }
+  .burger {
+    display: block;
+    justify-self: flex-end;
+    margin-left: auto;
+    &-line {
+      margin: 6px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .navbar {
+    padding: 2rem 1rem;
+  }
+
+  .nav-link-container {
+    .nav-link {
+      .link {
+        font-size: 0.6rem;
+      }
+    }
+  }
+}

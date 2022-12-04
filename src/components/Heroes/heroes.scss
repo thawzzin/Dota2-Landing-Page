@@ -1,6 +1,7 @@
 .hero-background {
   background-image: url('../../assets/dota2_bg2.jpg');
   background-size: cover;
+  background-position-x: center;
 }
 
 .hero-title{
@@ -12,6 +13,10 @@
         font-size: 1.5rem;
         margin: 2rem 5rem;
     }
+}
+
+.image-container:hover {
+  // padding: 2px;
 }
 
 .strength {

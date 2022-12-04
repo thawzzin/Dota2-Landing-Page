@@ -9,8 +9,8 @@ const Plus = ({ setActive }) => {
     Aos.init({ duration: 1000 });
   }, []);
   return (
-    <div className="plus-background h-screen">
-      <div className="plus-overlay bg-black/50 h-full p-20">
+    <div className="plus-background min-h-screen">
+      <div className="plus-overlay bg-black/50 min-h-screen p-20">
         <div
           data-aos="fade-up"
           className="flex flex-col justify-center items-center "

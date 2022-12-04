@@ -1,12 +1,14 @@
 import Aos from "aos";
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
 import { Api } from "../../Api";
 import "./Teams.scss";
 
 const Teams = ({ setActive }) => {
   const [teams, setTeams] = useState([]);
-  const [isLoading,setIsLoading]= useState(true)
+  const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
   const api = () => {
     Api.get("/teams")
       .then((res) => setTeams(res.data))
@@ -15,11 +17,13 @@ const Teams = ({ setActive }) => {
   useEffect(() => {
     setActive(false);
     api();
-    setIsLoading(false)
     Aos.init({ duration: 1000 });
     setTimeout(() => {
       Aos.refresh();
     }, 2000);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
   }, []);
 
   return (
@@ -37,23 +41,36 @@ const Teams = ({ setActive }) => {
           </p>
         </div>
         <div className="team-container flex flex-wrap justify-between gap-5 mt-5 select-none">
-          { isLoading? <ClipLoader className="mx-auto" color="#ccc" /> : teams?.slice(0, 200).map((team) => (
-            <div
-              key={team.team_id}
-              className="image-container flex flex-col justify-center items-center w-40 mb-5 rounded-md overflow-hidden cursor-pointer hover:scale-150 transition-all duration-200"
-            >
-              {team.logo_url ? (
-                <img className="w-full" src={team?.logo_url} alt={team.name} />
-              ) : (
-                <img
-                  className="w-full"
-                  src={require("../../assets/NoImage.png")}
-                  alt="Team Logo"
-                />
-              )}
-              <h4 className="text-center mt-1 w-full"> {team.name} </h4>
-            </div>
-          ))}
+          {isLoading ? (
+            <ClipLoader className="mx-auto" color="#ccc" />
+          ) : (
+            teams?.slice(0, 200).map((team) => (
+              <div
+                key={team.team_id}
+                onClick={() => {
+                  navigate("teamdetail", {
+                    state: { team: team },
+                  });
+                }}
+                className="image-container flex flex-col justify-center items-center w-40 mb-5 rounded-md overflow-hidden cursor-pointer hover:scale-150 transition-all duration-200"
+              >
+                {team.logo_url ? (
+                  <img
+                    className="w-full"
+                    src={team?.logo_url}
+                    alt={team.name}
+                  />
+                ) : (
+                  <img
+                    className="w-full"
+                    src={require("../../assets/NoImage.png")}
+                    alt="Team Logo"
+                  />
+                )}
+                <h4 className="text-center mt-1 w-full"> {team.name} </h4>
+              </div>
+            ))
+          )}
         </div>
       </div>
     </div>

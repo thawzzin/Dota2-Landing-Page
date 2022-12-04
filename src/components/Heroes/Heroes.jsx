@@ -4,10 +4,12 @@ import "./heroes.scss";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { ClipLoader } from "react-spinners";
+import { useNavigate } from "react-router-dom";
 
 const Heroes = ({ setActive }) => {
   const [heroes, setHeroes] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
 
   const poster = "https://cdn.cloudflare.steamstatic.com";
   const api = () => {
@@ -19,11 +21,13 @@ const Heroes = ({ setActive }) => {
   useEffect(() => {
     setActive(false);
     api();
-    setIsLoading(false);
     Aos.init({ duration: 1000 });
     setTimeout(() => {
       Aos.refresh();
     }, 2000);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
   }, []);
 
   return (
@@ -43,62 +47,88 @@ const Heroes = ({ setActive }) => {
         <div className="strength select-none" data-aos="fade-up">
           <h1 className="text-3xl text-center font-bold my-10">Strength</h1>
           <div className="hero-container flex flex-wrap justify-between">
-            { isLoading? <ClipLoader className="mx-auto" color="#ccc" /> : heroes
-              ?.filter((hero) => hero.primary_attr === "str")
-              .map((hero) => (
-                <div
-                  key={hero.id}
-                  className="image-container w-40 mb-5 rounded-md overflow-hidden cursor-pointer hover:scale-150 transition-all duration-200"
-                >
-                  
+            {isLoading ? (
+              <ClipLoader className="mx-auto" color="#ccc" />
+            ) : (
+              heroes
+                ?.filter((hero) => hero.primary_attr === "str")
+                .map((hero) => (
+                  <div
+                    key={hero.id}
+                    onClick={() => {
+                      navigate("herodetail", {
+                        state: { hero: hero },
+                      });
+                    }}
+                    className="image-container w-40 mb-5 rounded-md overflow-hidden cursor-pointer hover:scale-150 transition-all duration-200"
+                  >
                     <img
-                      className="w-full h-full"
+                      className="w-full rounded-md"
                       src={poster + hero?.img}
                       alt="Hero Poster"
                     />
-                  
-                </div>
-              ))}
+                    
+                  </div>
+                ))
+            )}
           </div>
         </div>
         <div className="agility select-none" data-aos="fade-up">
           <h1 className="text-3xl text-center font-bold my-10">Agility</h1>
           <div className="hero-container flex flex-wrap justify-between">
-            { isLoading? <ClipLoader className="mx-auto" color="#ccc" /> : heroes
-              ?.filter((hero) => hero.primary_attr === "agi")
-              .map((hero) => (
-                <div
-                  key={hero.id}
-                  className="image-container w-40 mb-5 rounded-md overflow-hidden cursor-pointer hover:scale-150 transition-all duration-200"
-                >
-                  {" "}
-                  <img
-                    className="w-full h-full"
-                    src={poster + hero?.img}
-                    alt="Hero Poster"
-                  />{" "}
-                </div>
-              ))}
+            {isLoading ? (
+              <ClipLoader className="mx-auto" color="#ccc" />
+            ) : (
+              heroes
+                ?.filter((hero) => hero.primary_attr === "agi")
+                .map((hero) => (
+                  <div
+                    key={hero.id}
+                    onClick={() => {
+                      navigate("herodetail", {
+                        state: { hero: hero },
+                      });
+                    }}
+                    className="image-container w-40 mb-5 rounded-md overflow-hidden cursor-pointer hover:scale-150 transition-all duration-200"
+                  >
+                    {" "}
+                    <img
+                      className="w-full h-full"
+                      src={poster + hero?.img}
+                      alt="Hero Poster"
+                    />{" "}
+                  </div>
+                ))
+            )}
           </div>
         </div>
         <div className="intelligence select-none" data-aos="fade-up">
           <h1 className="text-3xl text-center font-bold my-10">Intelligence</h1>
           <div className="hero-container flex flex-wrap justify-between">
-            { isLoading? <ClipLoader className="mx-auto" color="#ccc" /> : heroes
-              ?.filter((hero) => hero.primary_attr === "int")
-              .map((hero) => (
-                <div
-                  key={hero.id}
-                  className="image-container w-40 mb-5 rounded-md overflow-hidden cursor-pointer hover:scale-150 transition-all duration-200"
-                >
-                  {" "}
-                  <img
-                    className="w-full h-full"
-                    src={poster + hero?.img}
-                    alt="Hero Poster"
-                  />{" "}
-                </div>
-              ))}
+            {isLoading ? (
+              <ClipLoader className="mx-auto" color="#ccc" />
+            ) : (
+              heroes
+                ?.filter((hero) => hero.primary_attr === "int")
+                .map((hero) => (
+                  <div
+                    key={hero.id}
+                    onClick={() => {
+                      navigate("herodetail", {
+                        state: { hero: hero },
+                      });
+                    }}
+                    className="image-container w-40 mb-5 rounded-md overflow-hidden cursor-pointer hover:scale-150 transition-all duration-200"
+                  >
+                    {" "}
+                    <img
+                      className="w-full h-full"
+                      src={poster + hero?.img}
+                      alt="Hero Poster"
+                    />{" "}
+                  </div>
+                ))
+            )}
           </div>
         </div>
       </div>

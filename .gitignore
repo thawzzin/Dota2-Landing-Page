@@ -24,3 +24,4 @@ yarn-error.log*
 
 #Project-wide
 Api.js
+Data.js

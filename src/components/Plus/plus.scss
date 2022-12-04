@@ -1,6 +1,7 @@
 .plus-background {
   background-image: url("../../assets/bg_overview.jpg");
   background-size: cover;
+  background-position-x: center;
 }
 
 .plus-title {
@@ -28,6 +29,9 @@
 }
 
 @media screen and (max-width: 767px) {
+  // .plus-background {
+  //   background-position: center;
+  // }
   .plus-overlay {
     padding: 5rem 2rem;
   }
@@ -44,15 +48,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    p{
-        display: block;
+    p {
+      display: block;
     }
-    span{
-        display: none;
+    span {
+      display: none;
     }
   }
 
-  .subscription-container{
+  .subscription-container {
     flex-direction: column;
     align-items: center;
   }

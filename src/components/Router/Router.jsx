@@ -10,7 +10,7 @@ import TeamDetail from "../Teams/TeamDetail/TeamDetail";
 const Router = ({ setActive }) => {
   return (
     <Routes>
-      <Route path="/Dota2-Landing-Page" element={<Home setActive={setActive} />} />
+      <Route path="/" element={<Home setActive={setActive} />} />
       <Route path="heroes" >
         <Route index={true} element={<Heroes setActive={setActive} />} />
         <Route path="herodetail" element={<HeroDetail />} />

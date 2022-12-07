@@ -35,7 +35,7 @@ const TeamDetail = () => {
 
   return (
     <div className="team-background min-h-screen">
-      <div className="team-container flex flex-col justify-center items-center px-40 py-20 ">
+      <div className="team-detail-container flex flex-col justify-center items-center px-40 py-20 ">
         <div className="image-container w-40 mb-5 rounded-md overflow-hidden mt-20">
           {team.logo_url ? (
             <img

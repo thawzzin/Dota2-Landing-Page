@@ -9,7 +9,7 @@ const Plus = ({ setActive }) => {
     Aos.init({ duration: 1000 });
   }, []);
   return (
-    <div className="plus-background min-h-screen">
+    <div className="plus-background min-h-screen overflow-hidden">
       <div className="plus-overlay bg-black/50 min-h-screen p-20">
         <div
           data-aos="fade-up"
@@ -35,7 +35,7 @@ const Plus = ({ setActive }) => {
           </p>
 
           <div className="subscription-container flex justify-between gap-5 mt-14">
-            <div data-aos="fade-right" data-aos-delay="500">
+            <div data-aos="fade-right" data-aos-delay="100">
               <PlusBtn title="monthly subscription" price="$3.99" discount="" />
             </div>
             <PlusBtn
@@ -43,7 +43,7 @@ const Plus = ({ setActive }) => {
               price="$22.49"
               discount="6% Discount"
             />
-            <div data-aos="fade-left" data-aos-delay="500">
+            <div data-aos="fade-left" data-aos-delay="100">
               <PlusBtn
                 title="annual subscription"
                 price="$41.99"

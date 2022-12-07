@@ -40,7 +40,7 @@ const Teams = ({ setActive }) => {
             the best teams that are suitable for a specific type of.
           </p>
         </div>
-        <div className="team-container flex flex-wrap justify-between gap-5 mt-5 select-none">
+        <div className="team-container flex flex-wrap justify-between md:gap-5 mt-5 select-none">
           {isLoading ? (
             <ClipLoader className="mx-auto" color="#ccc" />
           ) : (

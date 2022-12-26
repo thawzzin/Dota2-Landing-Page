@@ -19,3 +19,17 @@ body {
 p{
   font-family: "Noto Sans", sans-serif;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: #111
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #ddd;
+  border-radius: 2rem;
+
+  &:hover {
+    background-color: #fff;
+  }
+}

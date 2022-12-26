@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Dota2-Landing-Page/static/css/main.74cd398e.css",
+    "main.css": "/Dota2-Landing-Page/static/css/main.cdcfbcc6.css",
     "main.js": "/Dota2-Landing-Page/static/js/main.2d923820.js",
     "static/js/787.0715afe2.chunk.js": "/Dota2-Landing-Page/static/js/787.0715afe2.chunk.js",
     "static/media/Dota2.mp4": "/Dota2-Landing-Page/static/media/Dota2.1f143a4643ff0191b0e7.mp4",
@@ -8,12 +8,12 @@
     "static/media/dota2_bg2.jpg": "/Dota2-Landing-Page/static/media/dota2_bg2.64e0db17500c664a1969.jpg",
     "static/media/NoImage.png": "/Dota2-Landing-Page/static/media/NoImage.d4484e97e421ab69f536.png",
     "index.html": "/Dota2-Landing-Page/index.html",
-    "main.74cd398e.css.map": "/Dota2-Landing-Page/static/css/main.74cd398e.css.map",
+    "main.cdcfbcc6.css.map": "/Dota2-Landing-Page/static/css/main.cdcfbcc6.css.map",
     "main.2d923820.js.map": "/Dota2-Landing-Page/static/js/main.2d923820.js.map",
     "787.0715afe2.chunk.js.map": "/Dota2-Landing-Page/static/js/787.0715afe2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.74cd398e.css",
+    "static/css/main.cdcfbcc6.css",
     "static/js/main.2d923820.js"
   ]
 }

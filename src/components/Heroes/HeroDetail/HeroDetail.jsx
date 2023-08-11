@@ -56,7 +56,9 @@ const HeroDetail = () => {
           ))}
         </div>
         <div className="w-full mt-10">
-          <h1 className="text-xl md:text-2xl font-semibold md:font-bold mb-5">Stats</h1>
+          <h1 className="text-xl md:text-2xl font-semibold md:font-bold mb-5">
+            Stats
+          </h1>
           <div className="flex flex-col gap-2 md:flex-row justify-between ">
             <div className="flex gap-2 ">
               <div>
@@ -125,19 +127,25 @@ const HeroDetail = () => {
           </div>
         </div>
         <div className="w-full mt-10">
-          <h1 className="text-xl md:text-2xl font-semibold md:font-bold mb-5">Lore</h1>
+          <h1 className="text-xl md:text-2xl font-semibold md:font-bold mb-5">
+            Lore
+          </h1>
           {data.map((d) => (
             <div> {d.name === hero.localized_name && <p>{d.lore}</p>} </div>
           ))}
         </div>
         <div className="w-full mt-10">
-          <h1 className="text-xl md:text-2xl font-semibold md:font-bold mb-5">Quote</h1>
+          <h1 className="text-xl md:text-2xl font-semibold md:font-bold mb-5">
+            Quote
+          </h1>
           {data.map((d) => (
             <div> {d.name === hero.localized_name && <p>{d.quote}</p>} </div>
           ))}
         </div>
         <div className="w-full mt-10">
-          <h1 className="text-xl md:text-2xl font-semibold md:font-bold mb-5">Associated Heroes</h1>
+          <h1 className="text-xl md:text-2xl font-semibold md:font-bold mb-5">
+            Associated Heroes
+          </h1>
           {data.map((d) => (
             <div>
               {" "}
